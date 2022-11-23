@@ -13,6 +13,7 @@ type Customer struct {
 	Age        int
 	Married    bool
 	Hobbies    []string
+	Address    []Address
 }
 
 func TestJSONObject(t *testing.T) {
