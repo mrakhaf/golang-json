@@ -103,7 +103,7 @@ func TestDecodeJSONArrayComplex(t *testing.T) {
 	}
 
 }
-func TestStrigOnlyDecodeJSONArrayComplex(t *testing.T) {
+func TestStringOnlyDecodeJSONArrayComplex(t *testing.T) {
 	jsonRequest := `[{"Street":"Brawijaya V","Country":"Indonesia","PostalCode":"15810"},{"Street":"Brawijaya VI","Country":"Indonesia","PostalCode":"15810"}]`
 	jsonBytes := []byte(jsonRequest)
 
@@ -116,4 +116,8 @@ func TestStrigOnlyDecodeJSONArrayComplex(t *testing.T) {
 	}
 
 	fmt.Println(address)
+
+	for _, adr := range *address {
+		fmt.Println(adr.Country)
+	}
 }
